@@ -6,8 +6,8 @@
 
 [Answers](technical/database.md)
 
-1. In MySQL, what is difference between BTREE and HASH indices?
-2. What are differences between `COUNT(*)`, `COUNT(1)` and `COUNT(column_name)`?
+1. In MySQL, what is difference between BTREE and HASH indices? [Answer](technical/database.md#in-mysql-what-is-difference-between-btree-and-hash-indices)
+2. What are differences between `COUNT(*)`, `COUNT(1)` and `COUNT(column_name)`? [Answer](technical/database.md#what-are-differences-between-count-count1-and-countcolumn_name)
 
 ## Coding
 
