@@ -1,6 +1,6 @@
 # Database
 
-1. In MySQL, what is difference between BTREE and HASH indices?
+## In MySQL, what is difference between BTREE and HASH indices?
 
     *HASH* is only supported in memory table and for Memory table, *HASH* is default, otherwise *BTREE* is default.
 
@@ -8,7 +8,7 @@
 
     *HASH* is a key-value map, and it is good for operators `=` or `<>`. Cannot optimize `ORDER BY` with *HASH*.
 
-1. What are differences between `COUNT(*)`, `COUNT(1)` and `COUNT(column_name)`?
+## What are differences between `COUNT(*)`, `COUNT(1)` and `COUNT(column_name)`?
    
     `COUNT(*)` counts all rows of a result set, including `NULL` values.
 
