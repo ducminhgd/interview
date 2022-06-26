@@ -40,3 +40,17 @@ There are five types of SQL commands: DDL, DML, DCL, TCL, and DQL.
     - Only one command: `SELECT`.
 
 Some people admit that there is another type called Data Administration Commands (DAC), which contains `START AUDIT` and `STOP AUDIT` commands.
+
+## What is a `PRIMARY KEY` constraint?
+
+A `PRIMARY KEY` constraint is a column (or combination of columns) used to designate each table row with a unique identifier.
+
+> Note: There’s a limit of one `PRIMARY KEY` constraint per table. All columns defined within a `PRIMARY KEY` constraint must be defined as NOT NULL.
+
+## What is a `FOREIGN KEY` constraint?
+
+A `FOREIGN KEY` is a column or collection of fields in a table referencing a `PRIMARY KEY` in another table. The table containing the primary key is known as the parent table, and the table containing the foreign key is called the child table.
+
+## What is a `UNIQUE` constraint?
+
+Like the `PRIMARY KEY`, the `UNIQUE` constraint also ensures that each value is different from the others in its column. However, tables can have multiple columns with `UNIQUE` constraints, unlike the `PRIMARY KEY` constraint, limited to just one.
