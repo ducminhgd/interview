@@ -54,3 +54,28 @@ A `FOREIGN KEY` is a column or collection of fields in a table referencing a `PR
 ## What is a `UNIQUE` constraint?
 
 Like the `PRIMARY KEY`, the `UNIQUE` constraint also ensures that each value is different from the others in its column. However, tables can have multiple columns with `UNIQUE` constraints, unlike the `PRIMARY KEY` constraint, limited to just one.
+
+## Explain the different types of JOIN.
+
+There are for types of joins: `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `OUTTER JOIN`.
+
+- `INNER JOIN`: get the intersected data of two data sets.
+- `LEFT JOIN`: get the intesected data of two data set and the left data set of `JOIN`.
+- `RIGHT JOIN`: get the intesected data of two data set and the right data set of `JOIN`.
+- `OUTTER JOIN`: get data of both data sets, except the intersected data.
+
+## What’s the difference between a `WHERE` clause and a `HAVING` clause?
+
+`WHERE` is the first condition that is applied to filter data from database and return a result set. `HAVING` is applied as the second condition to return only the groups within the result set that met the first condition.
+
+## What’s the difference between a `TRUNCATE` command and a `DELETE` command?
+
+|     Differences     |                            `DELETE`                             |                   `TRUNCATE`                   |
+| ------------------- | --------------------------------------------------------------- | ---------------------------------------------- |
+| Type                | DML                                                             | DDL                                            |
+| Function            | Used to remove specific rows or tuples from tables or relations | Used to delete all rows or tuples from a table |
+| `WHERE`             | Can contain `WHERE` clause                                      | Cannot contain `WHERE` clause                  |
+| Transaction logging | Row deletions are logged                                        | Deleted data pages are not logged              |
+
+The `TRUNCATE` command is faster than `DELETE`, but unlike the `DELETE` command, data cannot be rolled back after using it to recover data that has been mistakenly deleted.
+
