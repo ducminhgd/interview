@@ -79,3 +79,91 @@ There are for types of joins: `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `OUTTER J
 
 The `TRUNCATE` command is faster than `DELETE`, but unlike the `DELETE` command, data cannot be rolled back after using it to recover data that has been mistakenly deleted.
 
+## What are `UNION`, `UNION ALL`, `MINUS`, and `INTERSECT` set operators?
+
+The `UNION` operation combines the results of two or more `SELECT` statements. For example, getting the `UNION` of sets A and B, this operation would return all rows from both sets, excluding any duplicate rows.
+
+The `UNION ALL` operation does the same thing as `UNION`, but includes duplicate rows in its result set.
+
+The `MINUS` operation combines the results of two `SELECT` statements but only returns rows with values that belong to the first set of the result.
+
+The `INTERSECT` operation combines the results of two `SELECT` statements but only returns the rows with matching values in both sets.
+
+## What are Normalization and Denormalization?
+
+**Normalization** refers to the methods used to remove redundancies and inconsistencies in a database.
+
+**Denormalization** refers to methods used to improve the performance of queries.
+
+Normalization introduces more tables to a database, whereas Denormalization reduces the number of tables.
+
+## What are scalar functions?
+
+Scalar functions are defined by the user and return a single value (i.e., int, char, float, etc.) based on the input value.
+
+Common SQL scalar functions:
+- `CONCAT()` concatenates two or more character strings.
+- `FORMAT()` sets the format to display a collection of values.
+- `LEN()` calculates the total length of a given column.
+- `MID()` extracts substrings from a collection of string values.
+- `ROUND()` rounds the integer value for a numeric field.
+- `NOW()` returns the current date and time.
+- `RAND()` calculates a random collection of numbers of a given length.
+
+## What are aggregate functions?
+
+In SQL, aggregate functions (also known as group functions) are applied to a group of values (or all values) to calculate and return a single value.
+
+## What is a stored procedure?
+
+Instead of writing the same SQL query multiple times, you can save it as a stored procedure and call on it whenever necessary to execute it.
+
+## What is an index?
+
+An SQL index is a lookup table used by the database search engine to find and retrieve data quickly. An index can help make `SELECT` and `WHERE` clauses faster but can slow down the use of `UPDATE` and `INSERT` statements.
+
+## What is an SQL Server cursor? How do you use it?
+
+When you want to process result sets one row at a time, you can use a database cursor, a control structure that allows you to traverse records in a database. Cursors can be used to point to individual rows in a group of rows.
+
+## What are the different types of indexes?
+
+- **Clustered indexes** are clustered together with the main body of data. A clustered index sorts and stores rows of data in a table or view sequentially, based on key values of the table to match the order of the index. There can only be one clustered index per table.
+- **Non-clustered** indexes are separate from, and cannot be used to store or sort data in the main table. The key values of the index, and not the table are used to define the order of a non-clustered index.
+- **Column store indexes** are a standard form of index that efficiently stores data in a column-based format, rather than row-oriented.
+- **Filtered indexes** are used to index a section of rows within a table.
+- **Hash indexe**s are arrays, and use the Hash function F(K, N), where K is critical and N is the number of slots containing a pointer and row.
+- **Unique indexes** assign unique values to every row of data, so that the index key does not contain any duplicates.
+
+## What are ACID properties?
+
+The **ACID** properties refer to properties that must be followed for transactions in a database management system to remain consistent.
+- **Atomicity**: The entire transaction takes place at once or not at all.
+- **Consistency**: A database must be consistent before and after a transaction takes place.
+- **Isolation**: Transactions occur independently and can run concurrently with others.
+- **Durability**: Updates to the database must be stored in and written to disk so that transaction records can persist in the event of a system failure.
+
+## What is a schema?
+
+An SQL schema is an abstract representation of logically structured data elements. Database schemas in SQL are defined at the logical level by a database user known as the schema owner.
+
+## What is an alias command?
+
+The alias (`AS`) command makes columns or tables easier to read by giving them temporary names for the duration of a query.
+
+## What is the difference between `CHAR` and `VARCHAR` datatypes in SQL?
+
+The character or `CHAR` datatype stores fixed length character strings.
+The variable character or `VARCHAR` datatype stores variable length character strings.
+
+CHAR has better performance than `VARCHAR`, but `VARCHAR` can be useful for anticipating data values without a set length.
+
+## What is collation? What are the different collation sensitivity?
+
+Collation is a configuration setting that specifies how a database sorts and compares data. Different collation rules can be configured to determine the correct character sequence used to sort the character data.
+
+Collation sensitivity can be used to specify how different characters are treated.
+- **Accent sensitivity** differentiates between **a** and **á**.
+- **Case sensitivity** differentiates between **A** and **a**.
+- **Kana sensitivity** differentiates between Japanese Hiragana and Katakana.
+- **Width sensitivity** treats characters of different widths (single-byte and double-byte) differently.
